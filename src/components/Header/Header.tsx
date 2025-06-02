@@ -42,6 +42,56 @@ const Header = function () {
 						>
 							Services
 						</NavLink>
+						<ul className={`${block}__list`}>
+							<li className={`${block}__list-item`}>
+								<NavLink
+									to="/services/planning"
+									className={({ isActive, isPending }) =>
+										`${block}__link ${
+											isActive
+												? `${block}__link--active`
+												: isPending
+												? `${block}__link--pending`
+												: ""
+										}`
+									}
+								>
+									Planning
+								</NavLink>
+							</li>
+							<li className={`${block}__list-item`}>
+								<NavLink
+									to="/services/development"
+									className={({ isActive, isPending }) =>
+										`${block}__link ${
+											isActive
+												? `${block}__link--active`
+												: isPending
+												? `${block}__link--pending`
+												: ""
+										}`
+									}
+								>
+									Development
+								</NavLink>
+							</li>
+							<li className={`${block}__list-item`}>
+								<NavLink
+									to="/services/review"
+									className={({ isActive, isPending }) =>
+										`${block}__link ${
+											isActive
+												? `${block}__link--active`
+												: isPending
+												? `${block}__link--pending`
+												: ""
+										}`
+									}
+								>
+									Review
+								</NavLink>
+							</li>
+						</ul>
 					</li>
 					<li className={`${block}__list-item`}>
 						<NavLink
