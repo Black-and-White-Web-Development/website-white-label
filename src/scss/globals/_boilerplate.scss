@@ -20,12 +20,9 @@ button {
 	font-family: inherit;
 	font-size: inherit;
   font-weight: inherit;
+  line-height: inherit;
 
 	cursor: pointer;
-
-	&:hover {
-		border-color: var(--cl-primary);
-	}
 
 	&:focus,
 	&:focus-visible {

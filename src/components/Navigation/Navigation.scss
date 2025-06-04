@@ -21,8 +21,11 @@
 		}
 	}
 
-	&__link {
-		display: block;
+  &__link,
+  &__trigger {
+		display: flex;
+    align-items: center;
+    gap: u.rem(8);
 
 		border-style: solid;
 		border-width: 2px;
@@ -40,11 +43,20 @@
 		&:hover {
 			color: var(--cl-primary-shade);
 			background-color: var(--cl-primary-tint);
-			transition-duration: 400ms;
+			transition-duration: 200ms;
 		}
 
 		&--active {
 			border-color: var(--cl-primary);
 		}
 	}
+
+  &__caret {
+    transition-property: transform;
+    transition-duration: 200ms;
+
+    .nav__trigger[data-state="open"] & {
+      transform: rotate(-180deg);
+    }
+  }
 }
