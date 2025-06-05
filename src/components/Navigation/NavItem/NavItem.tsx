@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { NavigationMenu } from "radix-ui";
 import { NavLink, type NavLinkProps } from "react-router-dom";
 
@@ -18,7 +19,7 @@ const RouterNavLink = (props: RouterNavLinkProps) => {
 			ref={ref}
 			{...rest}
 			className={({ isActive, isPending }) =>
-				`nav__link ${isActive ? "nav__link--active" : isPending ? "nav__link--pending" : ""}`
+				clsx("nav__link", { "nav__link--active": isActive, "nav__link--pending": isPending })
 			}
 		/>
 	);

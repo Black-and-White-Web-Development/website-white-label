@@ -1,12 +1,17 @@
+import clsx from "clsx";
 import { NavigationMenu } from "radix-ui";
+
+import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 import NavDropdown from "./NavDropdown";
 import NavItem from "./NavItem";
 import "./Navigation.scss";
 
 const Navigation = function () {
+	const isMobile = useBreakpoint();
+
 	return (
-		<NavigationMenu.Root className="nav">
+		<NavigationMenu.Root className={clsx("nav", { "nav--mobile": isMobile })}>
 			<NavigationMenu.List className="nav__list">
 				<NavItem to="/" name="Home" />
 				<NavItem to="/about" name="About" />
