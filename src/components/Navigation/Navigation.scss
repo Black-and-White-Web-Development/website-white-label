@@ -63,12 +63,6 @@
   }
 
   &--mobile {
-    position: fixed;
-    left: 0;
-    height: 100%;
-
-    background-color: var(--background-primary);
-
     .nav {
       &__list {
         flex-direction: column;
