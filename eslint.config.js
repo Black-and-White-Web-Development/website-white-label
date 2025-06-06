@@ -37,13 +37,13 @@ export default tseslint.config(
 			"import/order": [
 				"error",
 				{
-					groups: ["builtin", "external", "internal"],
+					groups: ["builtin", "external", "internal", "parent", "sibling", "index", "type"],
 					pathGroups: [
-						{
-							pattern: "react",
-							group: "external",
-							position: "before",
-						},
+						{ pattern: "react", group: "external", position: "before" },
+						{ pattern: "@/hooks/**", group: "internal", position: "before" },
+						{ pattern: "@/utils/**", group: "internal", position: "before" },
+						{ pattern: "@/components/**", group: "internal", position: "after" },
+						{ pattern: "./**/*.scss", group: "sibling", position: "after" },
 					],
 					pathGroupsExcludedImportTypes: ["react"],
 					"newlines-between": "always",
