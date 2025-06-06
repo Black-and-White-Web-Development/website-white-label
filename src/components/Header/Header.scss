@@ -1,0 +1,21 @@
+@use "@/scss/util" as u;
+
+.header {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+
+  justify-items: flex-end;
+  justify-content: flex-end;
+
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	width: 100%;
+
+	background-color: var(--background-primary);
+	border-bottom-color: var(--midground);
+
+  @include u.breakpoint-down(small) {
+    display: flex;
+  }
+}
