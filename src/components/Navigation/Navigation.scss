@@ -1,0 +1,83 @@
+@use "@/scss/util" as u;
+
+.nav {
+	&__list {
+		list-style: none;
+		display: flex;
+		gap: u.rem(4);
+
+		padding-block: u.rem(8);
+
+		&--sub-list {
+			flex-direction: column;
+			gap: 0;
+			padding-block: 0;
+
+			border: solid 1px var(--midground);
+			background-color: var(--background-primary);
+		}
+	}
+
+  &__content {
+    position: absolute;
+    top: 100%;
+  }
+
+  &__link,
+  &__trigger {
+		display: flex;
+    align-items: center;
+    gap: u.rem(8);
+
+		border-style: solid;
+		border-width: 2px;
+		padding: u.rem(8) u.rem(16);
+
+		font-weight: 600;
+
+		color: var(--cl-primary);
+		background-color: var(--background-primary);
+		border-color: transparent;
+
+		transition-property: color, background-color, border-color;
+		transition-duration: 800ms;
+
+		&:hover {
+			color: var(--cl-primary-shade);
+			background-color: var(--cl-primary-tint);
+			transition-duration: 200ms;
+		}
+
+		&--active {
+			border-color: var(--cl-primary);
+		}
+	}
+
+  &__caret {
+    transition-property: transform;
+    transition-duration: 200ms;
+
+    .nav__trigger[data-state="open"] & {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &--mobile {
+    .nav {
+      &__list {
+        flex-direction: column;
+      }
+
+      &__list-item {
+        &--dropdown {
+          position: relative;
+        }
+      }
+
+      &__content {
+        left: 100%;
+        top: 0;
+      }
+    }
+  }
+}
