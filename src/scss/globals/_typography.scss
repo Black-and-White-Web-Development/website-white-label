@@ -1,8 +1,15 @@
 @use "/src/scss/util/" as u;
+@use "/src/scss/util/_fluid-sizing" as fluid;
+@use "/src/scss/util/_get-typographic-values" as font;
 
 :root {
 	--sans-serif: system-ui, Avenir, Helvetica, Arial, sans-serif;
 	--serif: serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
 
 	font-style: normal;
 	font-weight: 400;
@@ -21,8 +28,59 @@ body {
 }
 
 h1 {
-	font-size: 3.2em;
-	line-height: 1.1;
+  @include fluid.typography(7, 9);
+  font-weight: var(--fw-medium)
+}
+
+h2 {
+  @include fluid.typography(6, 8);
+  font-weight: var(--fw-medium)
+}
+
+h3 {
+  @include fluid.typography(5, 7);
+  font-weight: var(--fw-medium)
+}
+
+h4 {
+  @include fluid.typography(4, 6);
+  font-weight: var(--fw-medium)
+}
+
+h5 {
+  @include fluid.typography(3, 5);
+  font-weight: var(--fw-medium)
+}
+
+h6 {
+  @include fluid.typography(3, 4);
+  font-weight: var(--fw-medium)
+}
+
+a,
+blockquote,
+button,
+code,
+em,
+figcaption,
+p,
+pre,
+q,
+span,
+strong {
+  @include fluid.typography(2, 3);
+
+  &.small {
+    @include fluid.typography(1, 2);
+  }
+  
+  &.large {
+    @include fluid.typography(3, 4);
+  }
+}
+
+small {
+  @include fluid.typography(1, 2);
 }
 
 a {
