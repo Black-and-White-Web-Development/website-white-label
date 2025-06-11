@@ -23,7 +23,7 @@
 }
 
 body {
-	color: var(--text-primary);
+	color: var(--text-1);
 	font-family: var(--sans-serif);
 }
 
@@ -84,10 +84,10 @@ small {
 }
 
 a {
-	color: var(--link-primary);
+	color: var(--text-accent-1);
 	text-decoration: inherit;
 
 	&:hover {
-		color: var(--cl-primary);
+		color: var(--text-accent-2);
 	}
 }
