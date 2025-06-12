@@ -1,93 +1,32 @@
-@use "../util/colour-themes" as theme;
-@use "../util/generate-colour" as colour;
-
-$grey: 0;
-$mauve: 265;
-$slate: 232;
-$sage: 154;
-$olive: 114;
-$sand: 50;
-
-$neutral-hue: $grey;
-$accent-hue: 0;
-$accent-saturation: 50;
+@use "@/scss/tokens/colour-config" as c;
+@use "@/scss/tokens/colour-palettes" as palette;
+@use "@/scss/tokens/colour-scale" as globals;
 
 :root {
 	color-scheme: light dark;
 }
 
 body {
-  --background-1: var(--grey-1);
-  --background-2: var(--grey-2);
-  --background-a1: var(--grey-a1);
-  --background-a2: var(--grey-a2);
-  --background-accent-1: var(--accent-1);
-  --background-accent-2: var(--accent-2);
-  --background-accent-a1: var(--accent-a1);
-  --background-accent-a2: var(--accent-a2);
+  @include globals.define-colour-scale();
 
-  --interactive-1: var(--grey-3);
-  --interactive-2: var(--grey-4);
-  --interactive-3: var(--grey-5);
-  --interactive-a1: var(--grey-a3);
-  --interactive-a2: var(--grey-a4);
-  --interactive-a3: var(--grey-a5);
-  --interactive-accent-1: var(--accent-3);
-  --interactive-accent-2: var(--accent-4);
-  --interactive-accent-3: var(--accent-5);
-  --interactive-accent-a1: var(--accent-a3);
-  --interactive-accent-a2: var(--accent-a4);
-  --interactive-accent-a3: var(--accent-a5);
-
-  --border-1: var(--grey-6);
-  --border-2: var(--grey-7);
-  --border-3: var(--grey-8);
-  --border-a1: var(--grey-a6);
-  --border-a2: var(--grey-a7);
-  --border-a3: var(--grey-a8);
-  --border-accent-1: var(--accent-6);
-  --border-accent-2: var(--accent-7);
-  --border-accent-3: var(--accent-8);
-  --border-accent-a1: var(--accent-a6);
-  --border-accent-a2: var(--accent-a7);
-  --border-accent-a3: var(--accent-a8);
-
-  --solid-1: var(--grey-9);
-  --solid-2: var(--grey-10);
-  --solid-a1: var(--grey-a9);
-  --solid-a2: var(--grey-a10);
-  --solid-accent-1: var(--accent-9);
-  --solid-accent-2: var(--accent-10);
-  --solid-accent-a1: var(--accent-a9);
-  --solid-accent-a2: var(--accent-a10);
-
-  --text-1: var(--grey-12);
-  --text-2: var(--grey-11);
-  --text-a1: var(--grey-a12);
-  --text-a2: var(--grey-a11);
-  --text-accent-1: var(--accent-12);
-  --text-accent-2: var(--accent-12);
-  --text-accent-a1: var(--accent-a12);
-  --text-accent-a2: var(--accent-a11);
-
-  @include theme.light-neutral($neutral-hue);
-	@include theme.light-accent($accent-hue, $accent-saturation);
+  @include palette.neutral-light(c.$neutral-hue);
+	@include palette.accent-light(c.$accent-hue, c.$accent-saturation);
 
 	&.dark {
-		@include theme.dark-neutral($neutral-hue);
-		@include theme.dark-accent($accent-hue, $accent-saturation);
+		@include palette.neutral-dark(c.$neutral-hue);
+		@include palette.accent-dark(c.$accent-hue, c.$accent-saturation);
 	}
 
 	&.light {
-		@include theme.light-neutral($neutral-hue);
-		@include theme.light-accent($accent-hue, $accent-saturation);
+		@include palette.neutral-light(c.$neutral-hue);
+		@include palette.accent-light(c.$accent-hue, c.$accent-saturation);
 	}
 
 }
 
 @media (prefers-color-scheme: dark) {
 	body {
-		@include theme.dark-neutral($neutral-hue);
-		@include theme.dark-accent($accent-hue, $accent-saturation);
+		@include palette.neutral-dark(c.$neutral-hue);
+		@include palette.accent-dark(c.$accent-hue, c.$accent-saturation);
 	}
 }

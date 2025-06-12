@@ -1,6 +1,5 @@
-@use "/src/scss/util/" as u;
-@use "/src/scss/util/_fluid-sizing" as fluid;
-@use "/src/scss/util/_get-typographic-values" as font;
+@use "@/scss/util/mixins/fluid-sizing" as fluid;
+@use "@/scss/util/functions/get-typographic-values" as font;
 
 :root {
 	--sans-serif: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -29,7 +28,7 @@ body {
 
 h1 {
   @include fluid.typography(7, 9);
-  font-weight: var(--fw-medium)
+  font-weight: var(--fw-bold)
 }
 
 h2 {

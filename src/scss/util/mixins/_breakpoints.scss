@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "unit-converters" as unit;
+@use "@/scss/util/functions/unit-converters" as unit;
 
 $breakpoints-up: (
 	"medium": unit.em(700),

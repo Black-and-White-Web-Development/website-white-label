@@ -1,0 +1,57 @@
+@mixin neutral-light($hue) {
+	--grey-0: hsl(0 0% 100%);
+
+	@if $hue == 0 {
+		--grey-1: hsl(#{$hue} 0% 99%);
+		--grey-2: hsl(#{$hue} 0% 97%);
+		--grey-3: hsl(#{$hue} 0% 94%);
+		--grey-4: hsl(#{$hue} 0% 91%);
+		--grey-5: hsl(#{$hue} 0% 88%);
+		--grey-6: hsl(#{$hue} 0% 85%);
+		--grey-7: hsl(#{$hue} 0% 81%);
+		--grey-8: hsl(#{$hue} 0% 73%);
+		--grey-9: hsl(#{$hue} 0% 54%);
+		--grey-10: hsl(#{$hue} 0% 50%);
+		--grey-11: hsl(#{$hue} 0% 39%);
+		--grey-12: hsl(#{$hue} 0% 14%);
+
+		--grey-a1: hsl(#{$hue} 0% 99% / 0.01);
+		--grey-a2: hsl(#{$hue} 0% 97% / 0.02);
+		--grey-a3: hsl(#{$hue} 0% 94% / 0.06);
+		--grey-a4: hsl(#{$hue} 0% 91% / 0.06);
+		--grey-a5: hsl(#{$hue} 0% 88% / 0.13);
+		--grey-a6: hsl(#{$hue} 0% 85% / 0.15);
+		--grey-a7: hsl(#{$hue} 0% 81% / 0.2);
+		--grey-a8: hsl(#{$hue} 0% 73% / 0.27);
+		--grey-a9: hsl(#{$hue} 0% 54% / 0.45);
+		--grey-a10: hsl(#{$hue} 0% 50% / 0.49);
+		--grey-a11: hsl(#{$hue} 0% 39% / 0.61);
+		--grey-a12: hsl(#{$hue} 0% 14% / 0.88);
+	} @else {
+		--grey-1: hsl(#{$hue} 20% 99%);
+		--grey-2: hsl(#{$hue} 16% 97%);
+		--grey-3: hsl(#{$hue} 10% 94%);
+		--grey-4: hsl(#{$hue} 8% 91%);
+		--grey-5: hsl(#{$hue} 8% 88%);
+		--grey-6: hsl(#{$hue} 7% 85%);
+		--grey-7: hsl(#{$hue} 7% 81%);
+		--grey-8: hsl(#{$hue} 6% 73%);
+		--grey-9: hsl(#{$hue} 3% 54%);
+		--grey-10: hsl(#{$hue} 4% 50%);
+		--grey-11: hsl(#{$hue} 4% 39%);
+		--grey-12: hsl(#{$hue} 10% 14%);
+
+		--grey-a1: hsl(#{$hue} 20% 99% / 0.01);
+		--grey-a2: hsl(#{$hue} 16% 97% / 0.02);
+		--grey-a3: hsl(#{$hue} 10% 94% / 0.06);
+		--grey-a4: hsl(#{$hue} 8% 91% / 0.06);
+		--grey-a5: hsl(#{$hue} 8% 88% / 0.13);
+		--grey-a6: hsl(#{$hue} 7% 85% / 0.15);
+		--grey-a7: hsl(#{$hue} 7% 81% / 0.2);
+		--grey-a8: hsl(#{$hue} 6% 73% / 0.27);
+		--grey-a9: hsl(#{$hue} 3% 54% / 0.45);
+		--grey-a10: hsl(#{$hue} 4% 50% / 0.49);
+		--grey-a11: hsl(#{$hue} 4% 39% / 0.61);
+		--grey-a12: hsl(#{$hue} 10% 14% / 0.88);
+	}
+}
