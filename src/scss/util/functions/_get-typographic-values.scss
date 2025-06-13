@@ -1,5 +1,5 @@
 @use "sass:math";
-@use "typographic-scale" as token;
+@use "@/scss/tokens/typographic-scale" as token;
 
 $max-step: length(token.$typographic-scale);
 

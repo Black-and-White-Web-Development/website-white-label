@@ -1,6 +1,5 @@
-@use "/src/scss/util/" as u;
-@use "/src/scss/util/_fluid-sizing" as fluid;
-@use "/src/scss/util/_get-typographic-values" as font;
+@use "@/scss/util/mixins/fluid-sizing" as fluid;
+@use "@/scss/util/functions/get-typographic-values" as font;
 
 :root {
 	--sans-serif: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -23,13 +22,13 @@
 }
 
 body {
-	color: var(--text-primary);
+	color: var(--text-1);
 	font-family: var(--sans-serif);
 }
 
 h1 {
   @include fluid.typography(7, 9);
-  font-weight: var(--fw-medium)
+  font-weight: var(--fw-bold)
 }
 
 h2 {
@@ -84,10 +83,10 @@ small {
 }
 
 a {
-	color: var(--link-primary);
+	color: var(--text-accent-1);
 	text-decoration: inherit;
 
 	&:hover {
-		color: var(--cl-primary);
+		color: var(--text-accent-2);
 	}
 }

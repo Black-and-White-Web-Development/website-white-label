@@ -1,14 +1,13 @@
+@use "@/scss/util" as u;
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-:root {
-	background-color: var(--background-primary);
-}
-
 body {
+  background-color: var(--background-1);
   display: flex;
 	place-items: center;
 	margin: 0;

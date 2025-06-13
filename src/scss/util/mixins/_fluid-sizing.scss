@@ -1,6 +1,6 @@
 @use "sass:math";
-@use "unit-converters" as unit;
-@use "/src/scss/util/_get-typographic-values" as font;
+@use "@/scss/util/functions/unit-converters" as unit;
+@use "@/scss/util/functions/get-typographic-values" as font;
 
 @mixin _validate-inputs($min-val, $max-val, $min-vw, $max-vw, $property-name) {
 	@if unit($min-val) != "" {
