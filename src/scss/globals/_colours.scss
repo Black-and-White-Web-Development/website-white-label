@@ -8,7 +8,8 @@
 
 body {
   @include globals.define-colour-scale();
-
+  
+  @include palette.black-alpha();
   @include palette.neutral-light(c.$neutral-hue);
 	@include palette.accent-light(c.$accent-hue, c.$accent-saturation);
 
