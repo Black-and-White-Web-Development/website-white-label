@@ -12,8 +12,8 @@
 	border-bottom-width: 1px;
 	width: 100%;
 
-	background-color: var(--background-primary);
-	border-bottom-color: var(--midground);
+	background-color: var(--background-2);
+	border-bottom-color: var(--border-1);
 
   @include u.breakpoint-down(small) {
     display: flex;

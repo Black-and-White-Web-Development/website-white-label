@@ -1,7 +1,5 @@
-@forward "breakpoints";
-@forward "colour-themes";
-@forward "fluid-sizing";
-@forward "get-typographic-values";
-@forward "generate-colour";
-@forward "unit-converters";
-@forward "typographic-scale";
+@forward "mixins/breakpoints";
+@forward "mixins/fluid-sizing";
+
+@forward "functions/unit-converters";
+@forward "functions/get-typographic-values";
