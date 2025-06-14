@@ -1,6 +1,6 @@
-@use "@/scss/tokens/colour-config" as c;
-@use "@/scss/tokens/colour-palettes" as palette;
-@use "@/scss/tokens/colour-scale" as globals;
+@use "@/scss/config" as c;
+@use "@/scss/tokens/colours/palettes" as palette;
+@use "@/scss/tokens/colours/scale" as globals;
 
 :root {
 	color-scheme: light dark;
