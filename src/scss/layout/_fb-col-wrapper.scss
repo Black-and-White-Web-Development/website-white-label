@@ -11,7 +11,7 @@
 		repeat(
 			var(--col-count),
 			calc(
-				(min(100% - var(--space-lr), 80rem) - (var(--col-count) - 1) * var(--space-gap)) /
+				(min(100% - var(--space-lr), 90rem) - (var(--col-count) - 1) * var(--space-gap)) /
 					var(--col-count)
 			)
 		)
@@ -25,11 +25,11 @@
 	&__content {
 		grid-column: 2 / -2;
 
-		@include u.breakpoint(medium) {
+		@include u.breakpoint(tablet) {
 			grid-column: 2 / 5;
 		}
 
-		@include u.breakpoint(large) {
+		@include u.breakpoint(tablet) {
 			grid-column: 2 / 8;
 		}
 	}
@@ -37,22 +37,22 @@
 	&__image {
 		grid-column: 1 / -1;
 
-		@include u.breakpoint(medium) {
+		@include u.breakpoint(phone-landscape) {
 			grid-column: 5 / -1;
 		}
 
-		@include u.breakpoint(large) {
+		@include u.breakpoint(tablet) {
 			grid-column: 8 / -1;
 		}
 	}
 
-	@include u.breakpoint(medium) {
+	@include u.breakpoint(phone-landscape) {
 		--space-lr: 8rem;
 		--space-gap: 2rem;
 		--col-count: 6;
 	}
 
-	@include u.breakpoint(large) {
+	@include u.breakpoint(tablet) {
 		--col-count: 12;
 	}
 }

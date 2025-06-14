@@ -4,9 +4,9 @@
 	&__list {
 		list-style: none;
 		display: flex;
-		gap: u.rem(4);
+		gap: var(--space-1);
 
-		padding-block: u.rem(8);
+		padding-block: var(--space-2);
 
 		&--sub-list {
 			flex-direction: column;
@@ -26,11 +26,11 @@
   &__trigger {
     display: flex;
     align-items: center;
-    gap: u.rem(8);
+    gap: var(--space-2);
     
 		border-style: solid;
 		border-width: 2px;
-		padding: u.rem(8) u.rem(16);
+		padding: var(--space-2) var(--space-4);
     
 		font-weight: 600;
     
