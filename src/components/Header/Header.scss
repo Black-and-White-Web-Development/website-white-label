@@ -15,7 +15,7 @@
 	background-color: var(--background-2);
 	border-bottom-color: var(--border-1);
 
-  @include u.breakpoint-down(small) {
+  @include u.breakpoint-down(phone-landscape) {
     display: flex;
   }
 }
