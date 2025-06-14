@@ -1,15 +1,13 @@
-@use "config";
+@use "@/scss/tokens/radius/config" as config;
+@use "@/scss/tokens/scaling-config" as global;
 
 @mixin define-radius-scale {
-	--scaling: #{config.$scaling};
-	--radius-factor: #{config.$radius-factor};
-
-	--radius-1: calc(3px * var(--scaling) * var(--radius-factor));
-	--radius-2: calc(4px * var(--scaling) * var(--radius-factor));
-	--radius-3: calc(6px * var(--scaling) * var(--radius-factor));
-	--radius-4: calc(8px * var(--scaling) * var(--radius-factor));
-	--radius-5: calc(12px * var(--scaling) * var(--radius-factor));
-	--radius-6: calc(16px * var(--scaling) * var(--radius-factor));
+	--radius-1: calc(3px * #{global.$scaling} * #{config.$radius-factor});
+	--radius-2: calc(4px * #{global.$scaling} * #{config.$radius-factor});
+	--radius-3: calc(6px * #{global.$scaling} * #{config.$radius-factor});
+	--radius-4: calc(8px * #{global.$scaling} * #{config.$radius-factor});
+	--radius-5: calc(12px * #{global.$scaling} * #{config.$radius-factor});
+	--radius-6: calc(16px * #{global.$scaling} * #{config.$radius-factor});
 
 	--radius-full: #{if(config.$radius-factor == 0, 0px, 9999px)};
 	--radius-thumb: #{if(config.$radius-factor == 0 or config.$radius-factor == 0.75, 0.5px, 9999px)};
