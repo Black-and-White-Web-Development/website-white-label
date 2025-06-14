@@ -1,29 +1,23 @@
 @use "sass:map";
-@use "@/scss/util/functions/unit-converters" as unit;
-
-$breakpoints-up: (
-	"medium": unit.em(700),
-	"large": unit.em(900),
-	"xlarge": unit.em(1100),
-	"xxlarge": unit.em(1440),
-);
-
-$breakpoints-down: (
-	"xsmall": unit.em(452.98),
-	"small": unit.em(699.98),
-	"medium": unit.em(899.98),
-	"large": unit.em(1099.98),
-	"xlarge": unit.em(1439.98),
-);
+@use "@/scss/tokens/breakpoints-config" as breakpoints;
+@use "@/scss/util/functions/list-breakpoints" as f;
 
 @mixin breakpoint($size) {
-	@media (min-width: map.get($breakpoints-up, $size)) {
-		@content;
-	}
+  @if not map.has-key(breakpoints.$up, $size) {
+    @error "Invalid breakpoint `#{$size}`. Available breakpoints are:#{f.list-breakpoints(breakpoints.$up)}";
+  }
+
+  @media (min-width: map.get(breakpoints.$up, $size)) {
+    @content;
+  }
 }
 
 @mixin breakpoint-down($size) {
-	@media (max-width: map.get($breakpoints-down, $size)) {
-		@content;
-	}
+  @if not map.has-key(breakpoints.$down, $size) {
+    @error "Invalid breakpoint `#{$size}`. Available breakpoints are:#{f.list-breakpoints(breakpoints.$down)}";
+  }
+
+  @media (max-width: map.get(breakpoints.$down, $size)) {
+    @content;
+  }
 }

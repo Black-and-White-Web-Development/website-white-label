@@ -1,0 +1,17 @@
+@use "@/scss/util/functions/unit-converters" as unit;
+
+$up: (
+	"phone-landscape": unit.em(520),
+	"tablet": unit.em(768),
+	"laptop": unit.em(1024),
+	"desktop": unit.em(1280),
+	"desktop-wide": unit.em(1640),
+);
+
+$down: (
+	"phone-portrait": unit.em(519.98),
+	"phone-landscape": unit.em(767.98),
+	"tablet": unit.em(1023.98),
+	"laptop": unit.em(1279.98),
+	"desktop": unit.em(1639.98),
+);
